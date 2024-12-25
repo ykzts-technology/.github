@@ -13,6 +13,8 @@
     'customManagers:githubActionsVersions',
     'customManagers:dockerfileVersions',
     'helpers:disableTypesNodeMajor',
+    'preview:dockerCompose',
+    'preview:dockerVersions',
     ':automergeMinor',
     ':automergeRequireAllStatusChecks',
     ':combinePatchMinorReleases',
@@ -30,6 +32,9 @@
     ':widenPeerDependencies',
   ],
   dependencyDashboardLabels: ['dependencies'],
+  kubernetes: {
+    fileMatch: ['^k8s/.+\\.yaml$'],
+  },
   lockFileMaintenance: {
     extends: [':semanticCommitType(build)'],
   },
