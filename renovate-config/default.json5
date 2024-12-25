@@ -33,7 +33,7 @@
   ],
   dependencyDashboardLabels: ['dependencies'],
   kubernetes: {
-    fileMatch: ['^k8s/.+\\.yaml$']
+    fileMatch: ['^k8s/.+\\.yaml$'],
   },
   lockFileMaintenance: {
     extends: [':semanticCommitType(build)'],
